@@ -26,6 +26,7 @@ function AAZPlayAbility($cardID, $from, $resourcesPaid, $target = "-", $addition
 {
   global $currentPlayer;
   switch($cardID) {
+    case "AAZ004": AddCurrentTurnEffect($cardID, $currentPlayer); return "";
     case "AAZ024":
       AddCurrentTurnEffect($cardID, $currentPlayer);
       $arsenal = &GetArsenal($currentPlayer);
@@ -1414,7 +1415,7 @@ function MSTPlayAbility($cardID, $from, $resourcesPaid, $target = "-", $addition
       default: return "";
     }
   }
-  
+
   function PhantomTidemawDestroy($player = -1, $index = -1)
 {
     global $mainPlayer;

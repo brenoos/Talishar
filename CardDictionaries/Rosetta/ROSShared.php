@@ -27,6 +27,11 @@ function ROSPlayAbility($cardID, $from, $resourcesPaid, $target, $additionalCost
         case "ROS033":
             AddCurrentTurnEffect($cardID, $currentPlayer);
             return "";
+        case "ROS016":
+            GainHealth(1, $currentPlayer);
+            GainHealth(1, $currentPlayer);
+            GainHealth(1, $currentPlayer);
+            return "";
         default:
             return "";
      }
